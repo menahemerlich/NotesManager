@@ -1,15 +1,12 @@
 import { readFile } from "../utils/functions.js"
 
-
 export function userAuth(req, res, next) {
     let users = readFile("./data/users.json")
     let flag = false
     for (let user of users) {
-        if (req.headers["user-auth"] == user.username) {
-            flag = true
+        if (req.headers["user-auth"] === user.username) {
+            next()
         }
     }
-    if (flag) {
-        next()
-    } res.status(401).send("Unauthorized")
+    res.status(401).send("Unauthorized")
 }
