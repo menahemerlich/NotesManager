@@ -8,7 +8,7 @@ const PORT = 3030;
 
 app.use(express.json())
 app.use('/register', userRouter)
-app.use("/notes", notesRouter)
+app.use("/notes", noteRouter)
 
 app.get('/health', (req, res) => {
     res.status(200).json({"status":"ok", "serverTime": new Date().toISOString()})
