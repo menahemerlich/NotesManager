@@ -1,6 +1,6 @@
 import express from "express"
 import { userAuth } from "./middleware/user_auth.js"
-import { notesRouter } from "./routes/notes.js"
+import { noteRouter } from "./routers/noteRouter.js"
 import { userRouter } from "./routers/userRouter.js"
 
 const app = express()
