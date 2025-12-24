@@ -10,9 +10,8 @@ notes.get("/", async (req, res) => {
                 return true
             }
         })
-        res.json(notes)
+        res.status(200)json(notes)
     } catch (error) {
         console.error(error);
-        res.status(404).send("not found")
     }
 })
