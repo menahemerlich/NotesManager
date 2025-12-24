@@ -1,5 +1,4 @@
 import express from "express"
-import { userAuth } from "./middleware/user_auth.js"
 import { noteRouter } from "./routers/noteRouter.js"
 import { userRouter } from "./routers/userRouter.js"
 
