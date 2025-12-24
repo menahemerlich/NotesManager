@@ -20,5 +20,7 @@ userRouter.post('/', async (req, res) => {
         users.push(newUser)
         await writeFile(usersFile, users)
         res.status(200).send(`User: ${username} added successfully`)
+    } else {
+        return res.status(400).send('Inappropriate data.')
     }
 })
