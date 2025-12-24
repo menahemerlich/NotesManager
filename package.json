@@ -20,6 +20,7 @@
   "homepage": "https://github.com/menahemerlich/NotesManager#readme",
   "dependencies": {
     "express": "^5.2.1",
+    "nanoid": "^5.1.6",
     "nodemon": "^3.1.11"
   }
 }
