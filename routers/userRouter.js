@@ -6,7 +6,7 @@ export const userRouter = express()
 const usersFile = './data/users.json'
 
 userRouter.post('/', async (req, res) => {    
-    if (req.body && req.body.username){        
+    if (req.body && Object.keys(req.body).length === 1 && req.body.username){        
         const newUser = {}
         const username = req.body.username
         let users = await readFile(usersFile)
